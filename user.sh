@@ -11,7 +11,7 @@ sed -i '$ i\screen -AmdS limit /root/limit.sh' /etc/rc.d/rc.local
 
 sed -i '$ i\screen -AmdS ban /root/ban.sh' /etc/rc.d/rc.local
 
-echo -e "${color1}1${color3}. "0 0 * * * root /usr/local/bin/user-expire" > /etc/cron.d/"${color1}user-expire{color3}"
+echo "0 0 * * * root /usr/local/bin/user-expire" > /etc/cron.d/user-expire
 
 echo "0 0 * * * root /usr/local/bin/user-expire-pptp" > /etc/cron.d/user-expire-pptp
 
@@ -41,12 +41,6 @@ wget -O premium-script.tar "http://autoscriptnobita.tk/MASTER7752/raww/master/ma
 tar -xvf premium-script.tar
 
 rm -f premium-script.tar
-
-wget https://raw.githubusercontent.com/samreysteven/user.sh/master/user.sh
-
-chmod +x user.sh
-
-./user.sh
 
 cp /usr/local/bin/premium-script /usr/local/bin/menu
 
