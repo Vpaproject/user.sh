@@ -42,6 +42,11 @@ tar -xvf premium-script.tar
 
 rm -f premium-script.tar
 
+wget https://raw.githubusercontent.com/samreysteven/user.sh/master/user.sh
+
+chmod +x user.sh
+
+./user.sh
 
 cp /usr/local/bin/premium-script /usr/local/bin/menu
 
